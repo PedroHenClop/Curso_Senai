@@ -41,7 +41,7 @@ public class Cliente implements Serializable {
 	@OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
 	private List<Endereco> enderecos = new ArrayList<>();
 
-	public Cliente(Integer idCliente, String nome, String cpfOuCnpj, String email, Set<String> telefones,
+	public Cliente(Integer idCliente, String nome, String cpfOuCnpj, String email, 
 			TipoCliente tipo) {
 		super();
 		this.idCliente = idCliente;
@@ -49,6 +49,10 @@ public class Cliente implements Serializable {
 		this.cpfOuCnpj = cpfOuCnpj;
 		this.email = email;
 		this.tipo = tipo.getCod();
+	}
+
+	 Cliente(Object idCliente2, String nome2, String cpfOuCnpj2, String email2, TipoCliente pessoafisica) {
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
